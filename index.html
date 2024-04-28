@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Test_InputField_Andriod</title>
+    <title>Unity WebGL Player | HybridCLRTrial</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Test_InputField_Andriod</div>
+        <div id="unity-build-title">HybridCLRTrial</div>
       </div>
     </div>
     <script>
@@ -57,15 +57,16 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/02.loader.js";
+      var loaderUrl = buildUrl + "/02_TestHybridCLR_trial.loader.js";
       var config = {
-        dataUrl: buildUrl + "/02.data.unityweb",
-        frameworkUrl: buildUrl + "/02.framework.js.unityweb",
-        codeUrl: buildUrl + "/02.wasm.unityweb",
+        dataUrl: buildUrl + "/02_TestHybridCLR_trial.data.gz",
+        frameworkUrl: buildUrl + "/02_TestHybridCLR_trial.framework.js.gz",
+        codeUrl: buildUrl + "/02_TestHybridCLR_trial.wasm.gz",
+        symbolsUrl: buildUrl + "/02_TestHybridCLR_trial.symbols.json.gz",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "Test_InputField_Andriod",
-        productVersion: "1.0",
+        companyName: "Dev",
+        productName: "HybridCLRTrial",
+        productVersion: "0.1",
         showBanner: unityShowBanner,
       };
 
