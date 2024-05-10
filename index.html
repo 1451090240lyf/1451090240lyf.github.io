@@ -3,28 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | PhotoTest</title>
+    <title>Unity WebGL Player | LightBeamEffect</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
-  <style>
-    .iframe_wrap {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width:1vw;
-      height: 1vh;
-      z-index: 9999;
-    }
-
-    .close {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 2;
-      display: none;
-    }
-  </style>
   <body>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=750 height=1334 tabindex="-1"></canvas>
@@ -38,13 +20,11 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">PhotoTest</div>
+        <div id="unity-build-title">LightBeamEffect</div>
       </div>
     </div>
-    <iframe class="iframe_wrap" src="./web/web/index.html" frameborder="0"></iframe>
-    <script src="https://cdn.bootcss.com/vConsole/3.3.0/vconsole.min.js"></script>
     <script>
-   window.unityObject = null;
+
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
@@ -77,22 +57,17 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/03.4_ImageFormatDXT.loader.js";
+      var loaderUrl = buildUrl + "/01.1.loader.js";
       var config = {
-        dataUrl: buildUrl + "/03.4_ImageFormatDXT.data.unityweb",
-        frameworkUrl: buildUrl + "/03.4_ImageFormatDXT.framework.js.unityweb",
-        codeUrl: buildUrl + "/03.4_ImageFormatDXT.wasm.unityweb",
+        dataUrl: buildUrl + "/01.1.data.unityweb",
+        frameworkUrl: buildUrl + "/01.1.framework.js.unityweb",
+        codeUrl: buildUrl + "/01.1.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "PhotoTest",
+        productName: "LightBeamEffect",
         productVersion: "1.0",
         showBanner: unityShowBanner,
       };
-
-
-
-
-
 
       // By default Unity keeps WebGL canvas render target size matched with
       // the DOM size of the canvas element (scaled by window.devicePixelRatio)
@@ -144,33 +119,4 @@
 
     </script>
   </body>
-  <script>
-    function UPLoadFile() {
-      console.log("UPLoadFile");
-      window.top.postMessage(
-        {
-          name: "uploadFile",
-          data: "",
-        },
-        "*"
-      );
-    }
-    window.addEventListener(
-      "message",
-      function (event) {
-        if (event.data.name === "sendFileUrl") {
-          console.log(event.data.fileUrl);
-          window.unityObject.SendMessage(
-            "Main",
-            "Receipt",
-            event.data.fileUrl
-          );
-        }
-      },
-      false
-    );
-  </script>
-  <script>
-    var vConsole = new VConsole();
-  </script>
 </html>
