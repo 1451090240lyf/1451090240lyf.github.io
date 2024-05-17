@@ -1,1 +1,0 @@
-{"allParams":{"[许云升.好感度]":1},"curNodeId":0,"curActionIndex":0}
