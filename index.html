@@ -23,11 +23,6 @@
         <div id="unity-build-title">Test Game Pause</div>
       </div>
     </div>
-    <script src="https://cdn.bootcss.com/vConsole/3.3.0/vconsole.min.js"></script>
-
- <script>
-    var vConsole = new VConsole();
-  </script>
     <script>
 
       var container = document.querySelector("#unity-container");
@@ -62,11 +57,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/03.loader.js";
+      var loaderUrl = buildUrl + "/02.loader.js";
       var config = {
-        dataUrl: buildUrl + "/03.data.unityweb",
-        frameworkUrl: buildUrl + "/03.framework.js.unityweb",
-        codeUrl: buildUrl + "/03.wasm.unityweb",
+        dataUrl: buildUrl + "/02.data.unityweb",
+        frameworkUrl: buildUrl + "/02.framework.js.unityweb",
+        codeUrl: buildUrl + "/02.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Test Game Pause",
