@@ -1,0 +1,34 @@
+{
+    "questions": [
+        {
+            "question": "ABCDEF后面的字母是什么?",
+            "options": [
+                "G",
+                "X",
+                "Y",
+                "Z"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "question": "1 + 2 =?",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "question": "荷花一般在哪个季节开花?",
+            "options": [
+                "春",
+                "夏",
+                "秋",
+                "冬"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}
